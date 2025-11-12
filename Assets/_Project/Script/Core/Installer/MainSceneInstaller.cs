@@ -1,4 +1,5 @@
 using _Project.Script.Core.EntryPoints;
+using _Project.Script.UI;
 using UnityEngine;
 using Zenject;
 

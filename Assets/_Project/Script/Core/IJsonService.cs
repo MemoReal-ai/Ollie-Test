@@ -1,4 +1,4 @@
-﻿namespace _Project.Script.Core.EntryPoints
+﻿namespace _Project.Script.Core
 {
     public interface IJsonService
     {

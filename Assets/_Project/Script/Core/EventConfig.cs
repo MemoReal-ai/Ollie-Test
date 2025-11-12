@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace _Project.Script.Core.EntryPoints
+namespace _Project.Script.Core
 {
     [Serializable]
     public class EventConfig

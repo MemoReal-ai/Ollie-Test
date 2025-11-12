@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace _Project.Script.Core.EntryPoints
+namespace _Project.Script.UI
 {
     public class UIFactory
     {

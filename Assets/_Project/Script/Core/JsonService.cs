@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
-using UnityEngine;
 
-namespace _Project.Script.Core.EntryPoints
+namespace _Project.Script.Core
 {
     public class JsonService : IJsonService
     {

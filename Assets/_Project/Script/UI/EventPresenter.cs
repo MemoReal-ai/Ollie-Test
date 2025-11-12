@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using _Project.Script.Core;
+using _Project.Script.Core.EntryPoints;
 
-
-namespace _Project.Script.Core.EntryPoints
+namespace _Project.Script.UI
 {
     public class EventPresenter
     {

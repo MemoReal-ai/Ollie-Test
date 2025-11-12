@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using _Project.Script.Core.EntryPoints;
 using UnityEngine;
 
-namespace _Project.Script.Core.EntryPoints
+namespace _Project.Script.Core
 {
     public class GameEventProvider : IGameEventProvider
     {

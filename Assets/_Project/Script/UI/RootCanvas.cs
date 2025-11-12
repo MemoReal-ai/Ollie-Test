@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _Project.Script.Core.EntryPoints
+namespace _Project.Script.UI
 {
     public class RootCanvas : MonoBehaviour
     {

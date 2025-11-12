@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _Project.Script.Core.EntryPoints
+namespace _Project.Script.Core
 {
     public interface IGameEventProvider
     {

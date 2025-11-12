@@ -1,5 +1,6 @@
 #if UNITY_EDITOR
 using System;
+using _Project.Script.Core;
 using _Project.Script.Core.EntryPoints;
 using UnityEditor;
 using UnityEngine;

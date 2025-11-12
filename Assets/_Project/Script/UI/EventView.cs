@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace _Project.Script.Core.EntryPoints
+namespace _Project.Script.UI
 {
     public class EventView : MonoBehaviour
     {
