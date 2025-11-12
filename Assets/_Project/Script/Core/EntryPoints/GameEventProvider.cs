@@ -14,24 +14,27 @@ namespace _Project.Script.Core.EntryPoints
             _jsonService = jsonService;
         }
 
-        public Dictionary<EventType, EventConfig> LoadEventsDef()
+        public Dictionary<EventType, EventConfig> LoadEventsDef(DateTime? overrideTime = null)
         {
             var events = new Dictionary<EventType, EventConfig>();
-            var nowDate = DateTime.UtcNow;
+            var nowDate = overrideTime ?? DateTime.UtcNow;
+
             try
             {
-                _eventsConfig = Resources.Load<TextAsset>("content").text;
-                var eventWrapper = _jsonService.ParseJson<EventConfigWrapper>(_eventsConfig);
+                var textAsset = Resources.Load<TextAsset>("content");
+                var eventWrapper = _jsonService.ParseJson<EventConfigWrapper>(textAsset.text);
+                
                 foreach (var eventConfig in eventWrapper.HolidaySchedule)
                 {
-                    if (nowDate < eventConfig.StartDate || nowDate > eventConfig.EndDate)
-                        continue;
-                    events.Add(eventConfig.HolidayType, eventConfig);
+                    if (nowDate >= eventConfig.StartDate && nowDate <= eventConfig.EndDate)
+                    {
+                        events[eventConfig.HolidayType] = eventConfig;
+                    }
                 }
             }
             catch (Exception e)
             {
-                Debug.LogWarning(e);
+                Debug.LogWarning($"Failed to load events: {e}");
             }
 
             return events;
